@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine ❤️</title>
+  <style>
+    body {
+      background-color: #ffd6e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background-color: #ccc;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Will you be my Valentine? 💖</h2>
+    <button id="yes" onclick="yesClicked()">Yes</button>
+    <button id="no" onmouseover="moveNo()">No</button>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <h1 style="color:#ff4d6d; font-family:Arial;">
+          Yayyy! ❤️🥰<br>
+          I knew you’d say YES!
+        </h1>
+      `;
+    }
+  </script>
+
+</body>
+</html>
